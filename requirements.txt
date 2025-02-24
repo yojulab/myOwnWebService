@@ -2,4 +2,3 @@ streamlit
 fpdf2
 pandas
 groq
-groq.client
