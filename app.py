@@ -105,7 +105,7 @@ def chat_page():
         from groq import Groq
         import os
 
-        client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        client = Groq(api_key=os.environ.get("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"))
 
         try:
             # Groq API 호출
