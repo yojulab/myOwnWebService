@@ -3,9 +3,11 @@ from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 import os
 import pandas as pd
-from groq.client import Client
 
-client = Client(api_key="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")
+client = Groq(
+    # This is the default and can be omitted
+    api_key=os.environ.get("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"),
+)
 
 
 # 초기 상태 설정
@@ -105,10 +107,10 @@ def chat_page():
         st.session_state["chat_history"].append({"role": "user", "content": user_input})
         
         # Groq API를 사용하여 GPT 응답 생성
-        from groq import Groq
-        import os
+        # from groq import Groq
+        # import os
 
-        client = Groq(api_key=os.environ.get("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"))
+        # client = Groq(api_key=os.environ.get("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"))
 
         try:
             # Groq API 호출
