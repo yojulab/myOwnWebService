@@ -194,7 +194,7 @@ def download_page():
     pdf.add_page()
 
     # 유니코드 폰트 추가 (절대 경로 설정)
-    font_path = os.path.abspath('Jo2-j/myOwnWebService/NotoSansKR-VariableFont_wght.ttf')  # 절대 경로 사용
+    font_path = os.path.abspath('Jo2-j/myOwnWebService/NotoSans-Italic-VariableFont_wdth,wght.ttf')  # 절대 경로 사용
     
     pdf.add_font('NotoSans', '', font_path, uni=True)
     pdf.set_font('NotoSans', size=12)
