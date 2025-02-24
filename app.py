@@ -3,6 +3,7 @@ from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 import os
 import pandas as pd
+from groq import Groq
 
 client = Groq(
     # This is the default and can be omitted
