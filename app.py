@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 환경 변수 읽기
-client = os.getenv("GROQ_API_KEY")
+api_key = os.getenv("GROQ_API_KEY")
 
 
 # 초기 상태 설정
@@ -110,10 +110,10 @@ def chat_page():
         st.session_state["chat_history"].append({"role": "user", "content": user_input})
         
         # Groq API를 사용하여 GPT 응답 생성
-        # from groq import Groq
-        # import os
+        from groq import Groq
+        import os
 
-        client = Groq(api_key=client)
+        client = Groq(api_key=api_key)
 
         try:
             # Groq API 호출
