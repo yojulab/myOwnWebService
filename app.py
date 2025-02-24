@@ -5,10 +5,7 @@ import os
 import pandas as pd
 from groq import Groq
 
-client = Groq(
-    # This is the default and can be omitted
-    api_key=os.environ.get("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"),
-)
+client = Groq(api_key=os.environ.get("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"))
 
 
 # 초기 상태 설정
