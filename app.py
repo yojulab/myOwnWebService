@@ -6,6 +6,8 @@ import pandas as pd
 from groq import Groq
 from dotenv import load_dotenv
 
+
+
 # .env 파일 로드
 load_dotenv()
 
