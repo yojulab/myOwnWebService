@@ -158,7 +158,7 @@ def chat_page():
             # Groq API 호출
             chat_completion = client.chat.completions.create(
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant. Respond only in Korean"},
+                    {"role": "system", "content": "너는 사람들에게 유능한 Wrap Account를 해주는 펀드 매니저야, 너의 고객은 한국 사람밖에 없으니 한국말로만 대답을 해야해 그렇지 않으면 너의 직업은 위태로워"},
                     *st.session_state["chat_history"]  # 이전 채팅 기록 포함
                 ],
                 model="llama-3.3-70b-versatile"  # 사용할 모델
