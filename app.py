@@ -3,6 +3,9 @@ from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 import os
 import pandas as pd
+from groq.client import Client
+
+client = Client(api_key="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")
 
 
 # 초기 상태 설정
