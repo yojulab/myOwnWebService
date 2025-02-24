@@ -102,45 +102,6 @@ def report_page():
         st.session_state["page"] = "chat"
 
 # 4. GPT 상담 페이지
-# def chat_page():
-#     st.title("💬 GPT 상담")
-#     st.write("생성된 보고서를 바탕으로 GPT와 상담하세요.")
-    
-#     user_input = st.text_input("질문을 입력하세요:")
-#     if user_input:
-#         # 사용자 입력 저장
-#         st.session_state["chat_history"].append({"role": "user", "content": user_input})
-        
-#         # Groq API를 사용하여 GPT 응답 생성
-#         from groq import Groq
-#         import os
-
-#         client = Groq(api_key=api_key)
-
-#         try:
-#             # Groq API 호출
-#             chat_completion = client.chat.completions.create(
-#                 messages=st.session_state["chat_history"],  # 이전 채팅 기록 포함
-#                 model="llama-3.3-70b-versatile"  # 사용할 모델
-#             )
-#             gpt_response = chat_completion.choices[0].message.content
-#         except Exception as e:
-#             gpt_response = f"Groq API 호출 중 오류가 발생했습니다: {e}"
-        
-#         # GPT 응답 저장
-#         st.session_state["chat_history"].append({"role": "assistant", "content": gpt_response})
-    
-#     # 채팅 기록 표시
-#     for chat in st.session_state["chat_history"]:
-#         if chat["role"] == "user":
-#             st.write(f"👤 사용자: {chat['content']}")
-#         else:
-#             st.write(f"🤖 GPT: {chat['content']}")
-    
-#     if st.button("최종 보고서 다운로드"):
-#         st.session_state["page"] = "download"
-
-
 def chat_page():
     st.title("💬 GPT 상담")
     st.write("생성된 보고서를 바탕으로 GPT와 상담하세요.")
@@ -185,7 +146,6 @@ def chat_page():
 
 
 # 5. PDF 다운로드 페이지
-# PDF 다운로드 페이지
 
 def download_page():
     st.title("📥 최종 보고서 다운로드")
@@ -234,7 +194,6 @@ def download_page():
             file_name="final_report.pdf",
             mime="application/pdf"
         )
-
 
 # 메인 함수
 def main():
