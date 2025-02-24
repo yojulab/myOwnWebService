@@ -18,7 +18,7 @@ if "chat_history" not in st.session_state:
 def utf8_text(pdf, x, y, text):
     pdf.set_xy(x, y)
     pdf.set_font("Arial", size=12)
-    pdf.cell(200, 10, txt=text.encode('latin-1', 'replace').decode('latin-1'), ln=True, align="L")
+    pdf.cell(200, 10, txt=text.encode('utf-8', 'replace').decode('utf-8'), ln=True, align="L")
 
 # 1. 체크리스트 페이지
 def checklist_page():
