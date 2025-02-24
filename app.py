@@ -158,7 +158,7 @@ def chat_page():
             # Groq API 호출
             chat_completion = client.chat.completions.create(
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant. Respond only in Korean or English."},
+                    {"role": "system", "content": "You are a helpful assistant. Respond only in Korean"},
                     *st.session_state["chat_history"]  # 이전 채팅 기록 포함
                 ],
                 model="llama-3.3-70b-versatile"  # 사용할 모델
@@ -194,7 +194,7 @@ def download_page():
     pdf.add_page()
 
     # 유니코드 폰트 추가 (절대 경로 설정)
-    font_path = os.path.abspath('myOwnWebService/NotoSansKR-VariableFont_wght.ttf')  # 절대 경로 사용
+    font_path = os.path.abspath('Jo2-j/myOwnWebService/NotoSansKR-VariableFont_wght.ttf')  # 절대 경로 사용
     
     pdf.add_font('NotoSans', '', font_path, uni=True)
     pdf.set_font('NotoSans', size=12)
