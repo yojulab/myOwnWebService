@@ -4,8 +4,13 @@ from fpdf.enums import XPos, YPos
 import os
 import pandas as pd
 from groq import Groq
+from dotenv import load_dotenv
 
-client = Groq(api_key=os.environ.get("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"))
+# .env 파일 로드
+load_dotenv()
+
+# 환경 변수 읽기
+client = os.getenv("GROQ_API_KEY")
 
 
 # 초기 상태 설정
