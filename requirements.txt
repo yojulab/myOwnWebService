@@ -3,3 +3,6 @@ fpdf2
 pandas
 groq
 python-dotenv
+numpy
+matplotlib
+plotly
